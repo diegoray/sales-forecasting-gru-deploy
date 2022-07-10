@@ -13,6 +13,10 @@
   <!-- <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
   <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> -->
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
@@ -78,7 +82,13 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-
+    <!-- <div id="loader">
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div> -->
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -120,6 +130,19 @@
           </div>
         </div>
 
+        <!-- <div class="row">
+          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <form method="post" role="form" class="php-email-form">
+              <div class="form-group mt-3">
+                <label for="tesinput" class="form-label">tes</label>
+                <input class="form-control" type="input" name="tesinput">
+              </div>
+              <div class="text-center mt-2"><button type="submit">Tes Penjualan</button></div>
+            </form>
+          </div>
+        </div>
+        <p>{{ tes }}</p> -->
+
       </div>
     </section><!-- End Contact Us Section -->
 
@@ -131,6 +154,7 @@
           <h2>Hasil</h2>
           <p>Peramalan</p>
         </div>
+
         <!-- <select name="aa" id="aa">
           {% if prediction %}
           {% for key,value in prediction.iterrows() %}
@@ -145,12 +169,15 @@
           <div class="row">
             <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
               <form method="post" enctype="multipart/form-data" role="form" class="php-email-form">
-                <table class="table table-bordered">
+                <table id="data" class="table table-bordered">
                   <thead>
                     <tr>
-                      {% for col in column_names %}
+                      <!-- {% for col in column_names %}
                       <th>{{col}}</th>
-                      {% endfor %}
+                      {% endfor %} -->
+                      <th>Barcode</th>
+                      <th>Nama Barang</th>
+                      <th>Ramalan Bulan Depan</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -267,6 +294,20 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable();
+    });
+  </script>
+
 
   <!-- Vendor JS Files -->
   <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
