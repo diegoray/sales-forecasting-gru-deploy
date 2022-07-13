@@ -1062,6 +1062,10 @@ section {
 /*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
+table td:nth-child(2) {
+  text-align: start;
+}
+
 .contact .info {
   border-top: 3px solid #eb5d1e;
   border-bottom: 3px solid #eb5d1e;

@@ -38,15 +38,18 @@ def uploadFiles():
         parseCSV(file_path)
     if search("jan", uploaded_file.filename):
         query_date = "tgl >= '2021-01-01' and tgl <= '2021-12-31'"
+        prediction_date = "JANUARI 2022"
         prediction = forecastJan(query_date)
     if search("feb", uploaded_file.filename):
         query_date = "tgl >= '2021-02-01' and tgl <= '2022-01-31'"
+        prediction_date = "FEBRUARI 2022"
         prediction = forecastFeb(query_date)
 
     return render_template(
         "index.html",
         column_names=prediction.columns.values,
         row_data=list(prediction.values.tolist()),
+        prediction_date=prediction_date,
         zip=zip,
     )
 
