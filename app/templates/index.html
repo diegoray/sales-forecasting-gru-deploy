@@ -91,7 +91,8 @@
       <div class="row gy-4">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>Selamat Datang di Sistem Peramalan Penjualan Barang</h1>
-          <h2>Tekan tombol dibawah untuk meramal penjualan bulan berikutnya</h2>
+          <!-- <h2>Tekan tombol dibawah untuk meramal penjualan bulan berikutnya</h2> -->
+          <h2>Silahkan upload riwayat penjualan produk yang ingin diramal (*1 bulan kebelakang)</h2>
           <form method="post" enctype="multipart/form-data" role="form" class="php-email-form">
             <div class="form-group mt-3">
               <input class="form-control" type="file" name="file" id="formFile">
@@ -113,22 +114,6 @@
     <section id="ramal" class="contact">
       <div class="container" data-aos="fade-up">
 
-        <!-- <div class="section-title">
-          <p>Peramalan Penjualan</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <form method="post" enctype="multipart/form-data" role="form" class="php-email-form">
-              <div class="form-group mt-3">
-                <label for="formFile" class="form-label">Silahkan upload riwayat penjualan produk yang ingin diramal
-                  (*12
-                  bulan kebelakang)</label>
-                <input class="form-control" type="file" name="file" id="formFile">
-              </div>
-              <div class="text-center mt-2"><button type="submit">Ramal Penjualan</button></div>
-            </form>
-          </div>
-        </div> -->
         <div class="section-title">
           <h2>Hasil</h2>
           <p>Peramalan</p>
@@ -163,79 +148,6 @@
         </div>
       </div>
     </section>
-
-
-    <!-- <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Hasil</h2>
-          <p>Peramalan</p>
-        </div>
-
-        <div class="contact">
-          <div class="row">
-            <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-              <form method="post" enctype="multipart/form-data" role="form" class="php-email-form">
-                <table id="data" class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th>Barcode</th>
-                      <th>Nama Barang</th>
-                      <th>Ramalan Bulan Depan</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {% for row in row_data %}
-                    <tr>
-                      {% for col, row_ in zip(column_names, row) %}
-                      <td>{{row_}}</td>
-                      {% endfor %}
-                    </tr>
-                    {% endfor %}
-                  </tbody>
-                </table>
-
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-
-
-    <!-- <section id="about" class="about">
-      <div class="container">
-
-        <div class="row justify-content-between">
-          <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
-            <img src="{{ url_for('static', filename='assets/img/about-img.svg') }}" class="img-fluid" alt=""
-              data-aos="zoom-in">
-          </div>
-          <div class="col-lg-6 pt-5 pt-lg-0">
-            <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>
-            <p data-aos="fade-up" data-aos-delay="100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            </p>
-            <div class="row">
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-receipt"></i>
-                <h4>Corporis voluptates sit</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-cube-alt"></i>
-                <h4>Ullamco laboris nisi</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
 
   </main><!-- End #main -->
 
